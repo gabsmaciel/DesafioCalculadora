@@ -12,8 +12,8 @@ public class CalculadoraDeImc {
         System.out.println("Digite sua altura:");
         double altura = scannerDeImc.nextDouble();
 
-        double IMC = (peso/altura * altura);
-        System.out.printf ("O seu IMC é de %.2f", IMC);
+        double IMC = (peso/(altura * altura));
+        System.out.printf ("O seu IMC é de %.2f"+"\n", IMC);
 
         if (IMC < 18.5)
             System.out.println("Sua Classificação é de Magreza");
