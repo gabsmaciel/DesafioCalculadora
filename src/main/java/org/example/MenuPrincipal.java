@@ -2,7 +2,7 @@ package org.example;
 
 import org.example.CalculadoraDeGasolina.CalculadoraDeGasolina;
 import org.example.CalculadoraDeImc.CalculadoraDeImc;
-import org.example.CalculadoraDeNumeros.CalculadoraDeNumeros;
+import org.example.CalculadoraSimples.CalculadoraSimples;
 
 import java.util.Scanner;
 
@@ -25,10 +25,8 @@ public class MenuPrincipal {
                     break;
 
             case 2:
-                CalculadoraDeNumeros.Somar();
-                CalculadoraDeNumeros.Multiplicar();
-                CalculadoraDeNumeros.Dividir();
-                CalculadoraDeNumeros.Subtrair();
+                CalculadoraSimples.CalculoSimples();
+
                 break;
 
             case 3:
