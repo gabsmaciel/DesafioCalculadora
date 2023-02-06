@@ -1,10 +1,12 @@
 package org.example.CalculadoraDeGasolina;
-
+import java.util.Locale;
 import java.util.Scanner;
 
 public class CalculadoraDeGasolina {
 
     public static void CalculadoraDeGasolina() {
+
+        Locale.setDefault(Locale.US);
 
         Scanner CalculoGasolina = new Scanner(System.in);
         System.out.println("Metodo usado apenas com Números");

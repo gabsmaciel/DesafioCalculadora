@@ -1,8 +1,13 @@
 package org.example.CalculadoraSimples;
+import java.util.Locale;
 import java.util.Scanner;
 public class CalculadoraSimples {
 
+
+
     public static void CalculoSimples () {
+
+        Locale.setDefault(Locale.US);
         System.out.println("Bem-vindo a sua Calculadora\n");
         System.out.println("Escolha uma das seguintes operações: Somar, Subtrair, Dividir ou Multiplicar.");
         Scanner Operacoes = new Scanner(System.in);
@@ -18,7 +23,6 @@ public class CalculadoraSimples {
             case "Dividir" -> Dividir();
             case "Multiplicar" -> Multiplicar();
         }
-
 
     }
     public static void Somar() {

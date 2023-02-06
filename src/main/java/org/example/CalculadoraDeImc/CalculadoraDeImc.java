@@ -1,8 +1,11 @@
 package org.example.CalculadoraDeImc;
+import java.util.Locale;
 import java.util.Scanner;
 import java.lang.System;
 public class CalculadoraDeImc {
     public static void IMC()  {
+
+        Locale.setDefault(Locale.US);
 
         Scanner scannerDeImc = new Scanner(System.in);
 

@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.CalculadoraDeGasolina.CalculadoraDeGasolina;
 import org.example.CalculadoraDeImc.CalculadoraDeImc;
+import org.example.CalculadoraDeImpostos.CalculadoraDeImpostos;
 import org.example.CalculadoraSimples.CalculadoraSimples;
 
 import java.util.Scanner;
@@ -15,6 +16,7 @@ public class MenuPrincipal {
         System.out.println ("(1) Calculadora de IMC");
         System.out.println ("(2) Calculadora de Números");
         System.out.println ("(3) Calculadora de Gasolina");
+        System.out.println ("(4) Calculadora de Impostos");
         opcao = MenuInicial.nextInt();
 
         switch (opcao) {
@@ -31,6 +33,10 @@ public class MenuPrincipal {
 
             case 3:
                 CalculadoraDeGasolina.CalculadoraDeGasolina();
+                break;
+
+            case 4:
+                CalculadoraDeImpostos.CalculoDeImpostos();
                 break;
 
 
