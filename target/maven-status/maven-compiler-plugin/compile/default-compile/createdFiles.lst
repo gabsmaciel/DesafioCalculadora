@@ -1,0 +1,6 @@
+org\example\MenuPrincipal.class
+org\example\CalculadoraDeGasolina\CalculadoraDeGasolina.class
+org\example\CalculadoraSimples\CalculadoraSimples.class
+org\example\Main.class
+org\example\CalculadoraDeImpostos\CalculadoraDeImpostos.class
+org\example\CalculadoraDeImc\CalculadoraDeImc.class

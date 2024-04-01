@@ -1,64 +1,92 @@
 package org.example.CalculadoraSimples;
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 public class CalculadoraSimples {
 
-
-
     public static void CalculoSimples () {
 
         Locale.setDefault(Locale.US);
-        System.out.println("Bem-vindo a sua Calculadora\n");
-        System.out.println("Escolha uma das seguintes operações: Somar, Subtrair, Dividir ou Multiplicar.");
-        Scanner Operacoes = new Scanner(System.in);
-        String OperacaoEscolhida = Operacoes.next();
-        System.out.println("Somar");
-        System.out.println("Subtrair");
-        System.out.println("Dividir");
-        System.out.println("Multiplicar");
+        Scanner scanner = new Scanner(System.in);
 
-        switch (OperacaoEscolhida) {
-            case "Somar" -> Somar();
-            case "Subtrair" -> Subtrair();
-            case "Dividir" -> Dividir();
-            case "Multiplicar" -> Multiplicar();
+        System.out.println("Bem-vindo à sua Calculadora\n");
+        System.out.println("Escolha uma das seguintes operações: Somar, Subtrair, Dividir ou Multiplicar.");
+
+        String operacaoEscolhida = scanner.next().toLowerCase();
+
+        switch (operacaoEscolhida) {
+            case "somar":
+                somar(scanner);
+                break;
+            case "subtrair":
+                subtrair(scanner);
+                break;
+            case "dividir":
+                dividir(scanner);
+                break;
+            case "multiplicar":
+                multiplicar(scanner);
+                break;
+            default:
+                System.out.println("Operação inválida.");
         }
 
-    }
-    public static void Somar() {
-                Scanner scannerQueSalvaDoisNumeros = new Scanner(System.in);
-                Integer numero1 = scannerQueSalvaDoisNumeros.nextInt();
-                Integer numero2 = scannerQueSalvaDoisNumeros.nextInt();
-                long resultado = numero1 + numero2;
-                System.out.println("O seu resultado é " + resultado);
+        scanner.close();
     }
 
-
-    public static void Subtrair() {
-                Scanner scannerQueSalvaDoisNumeros = new Scanner(System.in);
-                Integer numero1 = scannerQueSalvaDoisNumeros.nextInt();
-                Integer numero2 = scannerQueSalvaDoisNumeros.nextInt();
-                long resultado = numero1 - numero2;
-               System.out.println("O seu resultado é " + resultado);
+    public static void somar(Scanner scanner) {
+        try {
+            System.out.println("Digite o primeiro número:");
+            int numero1 = scanner.nextInt();
+            System.out.println("Digite o segundo número:");
+            int numero2 = scanner.nextInt();
+            long resultado = numero1 + numero2;
+            System.out.println("O seu resultado é " + resultado);
+        } catch (InputMismatchException e) {
+            System.out.println("Entrada inválida. Certifique-se de digitar números válidos.");
+        }
     }
 
-    public static void Dividir() {
-                Scanner scannerQueSalvaDoisNumeros = new Scanner(System.in);
-                Integer numero1 = scannerQueSalvaDoisNumeros.nextInt();
-                Integer numero2 = scannerQueSalvaDoisNumeros.nextInt();
-                long resultado = numero1 / numero2;
-                System.out.println("O seu resultado é " + resultado);
+    public static void subtrair(Scanner scanner) {
+        try {
+            System.out.println("Digite o primeiro número:");
+            int numero1 = scanner.nextInt();
+            System.out.println("Digite o segundo número:");
+            int numero2 = scanner.nextInt();
+            long resultado = numero1 - numero2;
+            System.out.println("O seu resultado é " + resultado);
+        } catch (InputMismatchException e) {
+            System.out.println("Entrada inválida. Certifique-se de digitar números válidos.");
+        }
     }
 
-     public static void Multiplicar() {
-                Scanner scannerQueSalvaDoisNumeros = new Scanner(System.in);
-                Integer numero1 = scannerQueSalvaDoisNumeros.nextInt();
-                Integer numero2 = scannerQueSalvaDoisNumeros.nextInt();
-                long resultado = numero1 * numero2;
-                System.out.println("O seu resultado é " + resultado);
+    public static void dividir(Scanner scanner) {
+        try {
+            System.out.println("Digite o primeiro número:");
+            int numero1 = scanner.nextInt();
+            System.out.println("Digite o segundo número:");
+            int numero2 = scanner.nextInt();
+            if (numero2 == 0) {
+                System.out.println("Erro: Divisão por zero não permitida.");
+                return;
+            }
+            long resultado = numero1 / numero2;
+            System.out.println("O seu resultado é " + resultado);
+        } catch (InputMismatchException e) {
+            System.out.println("Entrada inválida. Certifique-se de digitar números válidos.");
+        }
     }
 
-
+    public static void multiplicar(Scanner scanner) {
+        try {
+            System.out.println("Digite o primeiro número:");
+            int numero1 = scanner.nextInt();
+            System.out.println("Digite o segundo número:");
+            int numero2 = scanner.nextInt();
+            long resultado = numero1 * numero2;
+            System.out.println("O seu resultado é " + resultado);
+        } catch (InputMismatchException e) {
+            System.out.println("Entrada inválida. Certifique-se de digitar números válidos.");
+        }
+    }
 }
-
-

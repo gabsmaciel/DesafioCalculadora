@@ -1,4 +1,5 @@
 package org.example.CalculadoraDeImpostos;
+
 import java.util.Scanner;
 
 public class CalculadoraDeImpostos {
@@ -37,7 +38,6 @@ public class CalculadoraDeImpostos {
         }
 
     }
-
 }
 
 
